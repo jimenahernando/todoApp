@@ -11,6 +11,6 @@
   </header>
   <main>
     <!-- listatareas -->
-    <app-listatareas></app-listatareas>
+    <app-listatareas [tareas]="arrTareas" (tareaBorrada)="onDeleteTarea($event)"></app-listatareas>
   </main>
 </div>

@@ -1,0 +1,4 @@
+article span{
+    /* porque del formulario viene con Mayuscula */
+    text-transform: capitalize;
+}
