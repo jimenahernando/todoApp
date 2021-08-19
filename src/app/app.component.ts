@@ -35,11 +35,17 @@ export class AppComponent {
       },
     ] 
   }
+
   onDeleteTarea($event: any){
-    console.log($event);
+    // console.log($event);
     this.arrTareas = this.arrTareas.filter(tarea =>{
       return tarea.id !== $event;
     });
-    console.log(this.arrTareas); 
+    // console.log(this.arrTareas); 
+  }
+
+  onTareaGuardar($event: Tarea){
+    // console.log($event);  
+    this.arrTareas.push($event);
   }
 }

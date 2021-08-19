@@ -1,16 +1,16 @@
 <div class="form py-4">
     <div class="my-2">
         <label for="title" class="form-label">Titulo</label>
-        <input type="text" class="form-control" id="title" placeholder="Introduce la tarea">
+        <input type="text" class="form-control" id="title" placeholder="Introduce la tarea" [(ngModel)]="titulo">
     </div>
     <div class="my-2">
         <label for="prioridad" class="form-label">Prioridad</label>
-        <select class="form-select" id="prioridad">
+        <select class="form-select" id="prioridad" [(ngModel)]="prioridad">
             <option selected>Selecciona una prioridad</option>
             <option value="urgente">Urgente</option>
             <option value="diaria">Diaria</option>
             <option value="mensual">Mensual</option>
         </select>
     </div>
-    <button class="btn btn-secondary mt-2">GUARDAR</button>
+    <button class="btn btn-secondary mt-2" (click)="guardarTarea()">GUARDAR</button>
 </div>
