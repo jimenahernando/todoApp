@@ -10,7 +10,11 @@ export class AppComponent {
   title = 'todoApp';
 
   arrTareas : Tarea[];
-  
+
+  // para las busquedas
+  prioridad: string;
+  busqueda: string;
+
   constructor(){
     this.arrTareas = [
       { 
@@ -33,7 +37,9 @@ export class AppComponent {
         title: 'Comer helado', 
         priority: 'urgente'
       },
-    ] 
+    ] ;
+    this.prioridad = '';
+    this.busqueda = '';
   }
 
   onDeleteTarea($event: any){
@@ -44,8 +50,17 @@ export class AppComponent {
     // console.log(this.arrTareas); 
   }
 
-  onTareaGuardar($event: Tarea){
+  onGuardarTarea($event: Tarea){
     // console.log($event);  
     this.arrTareas.push($event);
+  }
+
+  onFiltrarPrioridad($event: string){
+    // console.log($event);
+    this.prioridad = $event;  
+  }
+
+  onBusqueda($event: string){
+    this.busqueda = $event;
   }
 }

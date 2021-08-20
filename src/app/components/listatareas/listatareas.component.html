@@ -12,9 +12,10 @@
         <h3>Titulo de la tarea - prioridad: mensual</h3>
         <button class="btn btn-success"><i class="fas fa-trash-alt"></i></button>
     </article> -->
-    
+
     <!-- SUPERFICIE ITERABLE -->
-    <article class="bg-success p-3 d-flex justify-content-between align-items-center mb-2" *ngFor="let tarea of tareas" [ngClass]="{ 'bg-danger' : tarea.priority==='urgente' , 'bg-primary' : tarea.priority==='diaria', 'bg-success' : tarea.priority==='mensual'}"> 
+    <article class="bg-success p-3 d-flex justify-content-between align-items-center mb-2" *ngFor="let tarea of tareasPintadas"
+        [ngClass]="{ 'bg-danger' : tarea.priority==='urgente' , 'bg-primary' : tarea.priority==='diaria', 'bg-success' : tarea.priority==='mensual'}">
         <h3>{{tarea.title}} - prioridad: <span>{{tarea.priority}}</span></h3>
         <button class="btn text-white" (click)="borrarTarea(tarea.id)"><i class="fas fa-trash-alt"></i></button>
     </article>

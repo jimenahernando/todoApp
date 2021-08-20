@@ -2,15 +2,15 @@
   <header class="row">
     <div class="col-6">
       <!-- form -->
-      <app-form (nvaTarea)="onTareaGuardar($event)"></app-form>
+      <app-form (nvaTarea)="onGuardarTarea($event)"></app-form>
     </div>
     <div class="col-6">
       <!-- filtros -->
-      <app-filtros></app-filtros>
+      <app-filtros (prioridadEnviada)="onFiltrarPrioridad($event)" (busquedaEnviada)="onBusqueda($event)"></app-filtros>
     </div>
   </header>
   <main>
     <!-- listatareas -->
-    <app-listatareas [tareas]="arrTareas" (tareaBorrada)="onDeleteTarea($event)"></app-listatareas>
+    <app-listatareas [tareas]="arrTareas" [prioridad]="prioridad" [busqueda]="busqueda" (tareaBorrada)="onDeleteTarea($event)"></app-listatareas>
   </main>
 </div>
