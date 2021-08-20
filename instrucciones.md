@@ -12,3 +12,7 @@ SIEMPRE que modifiques el archivo angular.json tenes que parar y reiniciar el se
 6. Pintar el array de tareas en el componente listaTareas y asignarle estilos en funcion de la prioridad (INPUT) 
 7. Eliminar la tarea, comunicar al padre que tarea queremos que se elimine (OUTPUT).
     a. Capturamos el clic del boton de borrar y enviamos por parametroe el id de la tarea que queremos borrar
+8. Agregar tarea desde componente hijo
+9. Filtrar tarea por prioridad
+10. Buscador semantico
+11. si cualquier filtro no me muestra ningun valor o mi array esta vacio (por haber borrado todas las tareas), me tiene que pintar un article gris que ponga no hay tareas.
